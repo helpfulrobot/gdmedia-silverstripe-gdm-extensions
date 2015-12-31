@@ -10,7 +10,7 @@ class SSGuru_Requirements_Backend extends Requirements_Backend
             foreach ($files as $file) {
                 if (substr($combinedFileName, -3) == 'css') {
                     $result[] = $this->findRequirementFile($file, "css");
-                } else if (substr($combinedFileName, -2) == 'js') {
+                } elseif (substr($combinedFileName, -2) == 'js') {
                     $result[] = $this->findRequirementFile($file, "js");
                 }
             }
@@ -93,7 +93,7 @@ class SSGuru_Requirements_Backend extends Requirements_Backend
         $subFolders = array();
         if (strrpos($ext, "css", -strlen($ext)) !== false) {
             $subFolders[] = "css";
-        } else if (strrpos($ext, "js", -strlen($ext)) !== false) {
+        } elseif (strrpos($ext, "js", -strlen($ext)) !== false) {
             $subFolders[] = "javascript";
             $subFolders[] = "js";
         }
